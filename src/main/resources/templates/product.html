@@ -133,8 +133,8 @@ img {
 <body>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="pt-5">범이비누 종류 소개</h1>
-			<p class="lead">비누의 외형 등 특성 설명</p>
+			<h1 class="pt-5" th:text="#{index.jumbotron.title}">위 큰 영역 제목</h1>
+			<p class="lead" th:text="#{index.courses.tagline}">태그라인</p>
 		</div>
 	</div>
 
@@ -168,7 +168,7 @@ img {
 		</div>
 		<div class="row">
 			<div class="col-md-4 offset-md-6">
-				<button type="button" class="btn btn-success">구매하기</button>
+				<button type="button" class="btn btn-success" th:text="#{product.button.buy}">버튼텍스트</button>
 			</div>
 		</div>
 	</div>
