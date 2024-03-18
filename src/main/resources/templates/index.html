@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title th:text="#{index.page.title}">페이지 제목</title>
-<link
-	href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
-	rel="stylesheet" th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
+<link href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
 <script src="../static/js/jquery-3.7.1.min.js"
 	th:src="@{/js/jquery-3.7.1.min.js}"></script>
 
 <link th:href="@{/css/custom.css}" rel="stylesheet" />
 <style th:remove="all">
 .jumbotron {
-	background:
-		url('../static/images/SpringCoreJumbotron.jpg')
-		no-repeat center center;
+	background: url('../static/images/SpringCoreJumbotron.jpg') no-repeat
+		center center;
 	height: 350px;
 	color: white;
 	text-shadow: #444 0 1px 1px;
@@ -130,7 +129,8 @@ img {
 </style>
 </head>
 <body>
-	<div class="jumbotron" th:replace="~{fragments/jumbotron.html::jumbotron}">
+	<div class="jumbotron"
+		th:replace="~{fragments/jumbotron.html::jumbotron}">
 		<div class="container">
 			<h1 th:text="#{index.jumbotron.title}">위 큰 영역 제목</h1>
 			<p class="lead" th:text="#{index.courses.tagline}">태그라인</p>
@@ -152,8 +152,7 @@ img {
 								<div class="course-box-image-container">
 									<img role="presentation"
 										src="https://soap-images.pages.dev/bumsoap-regular.jpg"
-										th:src="@{/images/bumsoap-regular.jpg}"
-										class="img-fluid">
+										th:src="@{/images/bumsoap-regular.jpg}" class="img-fluid">
 								</div>
 								<div class="course-listing-title">Introduction to Spring</div>
 								<div class="course-listing-subtitle">Introductory Course
@@ -166,7 +165,7 @@ img {
 							<img align="left" alt="John Thompson"
 								src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
 								th:src="@{/images/instructor_jt.jpg}"
-								class="img-thumbnail rounded-circle" style='width:45px'>
+								class="img-thumbnail rounded-circle" style='width: 45px'>
 							<div class="small course-author-name">John Thompson</div>
 						</div>
 						<div class="col-4">
@@ -183,8 +182,7 @@ img {
 								<div class="course-box-image-container">
 									<img role="presentation"
 										src="https://soap-images.pages.dev/bumsoap-meju.jpg"
-										th:src="@{/images/bumsoap-meju.jpg}"
-										class="course-box-image">
+										th:src="@{/images/bumsoap-meju.jpg}" class="course-box-image">
 								</div>
 								<div class="course-listing-title">Spring Core</div>
 								<div class="course-listing-subtitle">The Fundamentals of
@@ -196,8 +194,8 @@ img {
 						<div class="col-8">
 							<img align="left" alt="John Thompson"
 								src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
-                th:src="@{/images/instructor_jt.jpg}"
-								class="img-thumbnail rounded-circle" style='width:45px'>
+								th:src="@{/images/instructor_jt.jpg}"
+								class="img-thumbnail rounded-circle" style='width: 45px'>
 							<div class="small course-author-name">John Thompson</div>
 						</div>
 						<div class="col-4">
@@ -209,14 +207,12 @@ img {
 			<div class="col-md-4">
 				<div class="course-listing">
 					<div class="row">
-						<a data-role="course-box-link"
-							href="product.html">
+						<a data-role="course-box-link" href="product.html">
 							<div class="col-lg-12">
 								<div class="course-box-image-container">
 									<img role="presentation"
 										src="https://soap-images.pages.dev/bumsoap-snow.jpg"
-										th:src="@{/images/bumsoap-snow.jpg}"
-										class="course-box-image">
+										th:src="@{/images/bumsoap-snow.jpg}" class="course-box-image">
 								</div>
 								<div class="course-listing-title">Spring Core Advanced</div>
 								<div class="course-listing-subtitle">Advanced Topics of
@@ -228,8 +224,8 @@ img {
 						<div class="col-8">
 							<img align="left" alt="John Thompson"
 								src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
-                th:src="@{/images/instructor_jt.jpg}"
-								class="img-thumbnail rounded-circle" style='width:45px'>
+								th:src="@{/images/instructor_jt.jpg}"
+								class="img-thumbnail rounded-circle" style='width: 45px'>
 							<div class="small course-author-name">John Thompson</div>
 						</div>
 						<div class="col-4">
@@ -262,8 +258,8 @@ img {
 						<div class="col-8">
 							<img align="left" alt="John Thompson"
 								src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
-                th:src="@{/images/instructor_jt.jpg}"
-								class="img-thumbnail rounded-circle" style='width:45px'>
+								th:src="@{/images/instructor_jt.jpg}"
+								class="img-thumbnail rounded-circle" style='width: 45px'>
 							<div class="small course-author-name">John Thompson</div>
 
 						</div>
@@ -276,8 +272,7 @@ img {
 			<div class="col-md-4">
 				<div class="course-listing">
 					<div class="row">
-						<a data-role="course-box-link"
-							href="product.html">
+						<a data-role="course-box-link" href="product.html">
 							<div class="col-lg-12">
 								<div class="course-box-image-container">
 									<img role="presentation"
@@ -322,8 +317,8 @@ img {
 						<div class="col-8">
 							<img align="left" alt="John Thompson"
 								src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
-                th:src="@{/images/instructor_jt.jpg}"
-								class="img-thumbnail rounded-circle" style='width:45px'>
+								th:src="@{/images/instructor_jt.jpg}"
+								class="img-thumbnail rounded-circle" style='width: 45px'>
 							<div class="small course-author-name">John Thompson</div>
 
 						</div>
@@ -334,15 +329,14 @@ img {
 				</div>
 			</div>
 		</div>
- </div>
-  <div class="container"
-    th:replace="~{fragments/jumbotron :: footer}">
-    <div class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container">
-        <p class="navbar-text pull-left">©2024-BumSoap &
-          Spring-Thymeleaf</p>
-      </div>
-    </div>
-  </div>
+	</div>
+	<div class="container" th:replace="~{fragments/jumbotron :: footer}">
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">©2024-BumSoap &
+					Spring-Thymeleaf</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
