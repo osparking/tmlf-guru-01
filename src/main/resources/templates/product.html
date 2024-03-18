@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>범이비누 비누 종류</title>
+<title th:text="#{index.page.title}">범이비누 비누 종류</title>
 <link
 	href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -14,7 +14,7 @@
 <style th:remove="all">
 .jumbotron {
 	background:
-		url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg')
+		    url('../static/images/SpringCoreJumbotron.jpg')
 		no-repeat center center;
 	height: 350px;
 	color: white;

@@ -10,11 +10,10 @@
 	th:src="@{/js/jquery-3.7.1.min.js}"></script>
 
 <link th:href="@{/css/custom.css}" rel="stylesheet" />
-
 <style th:remove="all">
 .jumbotron {
 	background:
-		url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg')
+		url('../static/images/SpringCoreJumbotron.jpg')
 		no-repeat center center;
 	height: 350px;
 	color: white;
@@ -131,7 +130,7 @@ img {
 </style>
 </head>
 <body>
-	<div class="jumbotron" th:replace="~{fragments/jumbotron::jumbotron}">
+	<div class="jumbotron" th:replace="~{fragments/jumbotron.html::jumbotron}">
 		<div class="container">
 			<h1 th:text="#{index.jumbotron.title}">위 큰 영역 제목</h1>
 			<p class="lead" th:text="#{index.courses.tagline}">태그라인</p>
@@ -335,6 +334,6 @@ img {
 				</div>
 			</div>
 		</div>
- -->	</div>
+ </div>
 </body>
 </html>
