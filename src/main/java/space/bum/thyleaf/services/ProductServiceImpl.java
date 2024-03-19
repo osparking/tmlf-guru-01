@@ -6,10 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import space.bum.thyleaf.domain.Author;
 import space.bum.thyleaf.domain.Product;
 import space.bum.thyleaf.domain.ProductCategory;
 
+@Service
 public class ProductServiceImpl implements ProductService {
   private Map<Integer, Product> productMap;
 
