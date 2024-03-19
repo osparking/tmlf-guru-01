@@ -18,6 +18,6 @@ public class ProductController {
 
   @GetMapping("/product")
   public String getProduct() {
-    return "product";
+    return "redirect:/index";
   }
 }
