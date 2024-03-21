@@ -86,7 +86,7 @@ public class ProductServiceImpl implements ProductService {
 
     Product springCoreUltimate = new Product();
     springCoreUltimate.setId(2);
-    springCoreUltimate.setCourseName("Spring Core Ultimate");
+    springCoreUltimate.setCourseName("메주비누");
     springCoreUltimate.setCourseSubtitle("Ultimate Bundle of Spring Core!");
     springCoreUltimate.setAuthor(pj);
     springCoreUltimate.setCourseDescription(
@@ -105,7 +105,7 @@ public class ProductServiceImpl implements ProductService {
 
     Product thymeleaf = new Product();
     thymeleaf.setId(3);
-    thymeleaf.setCourseName("Thymeleaf");
+    thymeleaf.setCourseName("백설공주");
     thymeleaf.setCourseSubtitle("Thymeleaf and Spring!");
     thymeleaf.setAuthor(pj);
     thymeleaf.setCourseDescription(
