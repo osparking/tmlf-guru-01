@@ -37,6 +37,12 @@ public class ProductServiceImpl implements ProductService {
     pj.setFirstName("종범");
     pj.setId(1);
     pj.setImage("producer_pj.jpg");
+    
+    Author jt = new Author();
+    jt.setFirstName("John");
+    jt.setLastName("Thompson");
+    jt.setId(1);
+    jt.setImage("instructor_jt.jpg");
 
     ProductCategory springIntroCat = new ProductCategory();
     springIntroCat.setId(1);
