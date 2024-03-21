@@ -165,6 +165,20 @@ img {
 			</div>
 		</div>
 		<div class="row">
+			<div class="row course-listing-extra-info col-6">
+				<div class="col-8">
+					<img align="left" alt="John Thompson"
+						src="../static/images/instructor_jt.jpg"
+						th:src="@{'/images/' + ${product.author.image}}"
+						class="img-thumbnail rounded-circle" style='width: 45px'>
+					<div class="small course-author-name"
+						th:text="${product.author.lastName} + ' ' + ${product.author.firstName}">
+						비누 생산자</div>
+				</div>
+				<div class="col-4">
+					<div class="small course-price" th:text="${'$'+ product.price}">가격</div>
+				</div>
+			</div>
 			<div class="col-md-4 offset-md-6">
 				<button type="button" class="btn btn-success"
 					th:text="#{product.button.buy}">버튼텍스트</button>
