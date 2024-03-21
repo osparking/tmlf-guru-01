@@ -131,7 +131,7 @@ public class ProductServiceImpl implements ProductService {
     springCore.setId(4);
     springCore.setCourseName("Spring Core");
     springCore.setCourseSubtitle("Spring Core - mastering Spring!");
-    springCore.setAuthor(pj);
+    springCore.setAuthor(jt);
     springCore.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
             +
@@ -150,7 +150,7 @@ public class ProductServiceImpl implements ProductService {
     springCoreAdv.setId(5);
     springCoreAdv.setCourseName("Spring Core Advanced");
     springCoreAdv.setCourseSubtitle("Advanced Spring Core!");
-    springCoreAdv.setAuthor(pj);
+    springCoreAdv.setAuthor(jt);
     springCoreAdv.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
             +
@@ -170,7 +170,7 @@ public class ProductServiceImpl implements ProductService {
     springCoreDevOps.setCourseName("Spring Core Dev-Ops");
     springCoreDevOps
         .setCourseSubtitle("Deploying Spring in the Enterprise and the cloud!");
-    springCoreDevOps.setAuthor(pj);
+    springCoreDevOps.setAuthor(jt);
     springCoreDevOps.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
             +
