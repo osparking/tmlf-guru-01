@@ -140,7 +140,7 @@ img {
 	<div class="container">
 		<div class="row mt-5">
 			<div class="col-md-12">
-				<h1>Spring Framework Guru - Course Name</h1>
+				<h1 th:text="'범이비누 -' + ${product.courseName}">상품 범주 - 세부 분류</h1>
 			</div>
 		</div>
 		<div class="row">
@@ -151,8 +151,8 @@ img {
 			</div>
 			<div class="col-md-6">
 				<div>
-					<h2>Course Title</h2>
-					<p>대통령은 제4항과 제5항의 규정에 의하여 확정된 법률을 지체없이 공포하여야 한다. 제5항에 의하여 법률이
+					<h2 th:text="${product.courseSubtitle}">Course Title</h2>
+					<p th:text="${product. courseDescription}">대통령은 제4항과 제5항의 규정에 의하여 확정된 법률을 지체없이 공포하여야 한다. 제5항에 의하여 법률이
 						확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를
 						공포한다. 한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야
 						한다. 제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여 국회재적의원 과반수의 찬성이 있어야 한다.
