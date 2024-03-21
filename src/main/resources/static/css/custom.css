@@ -1,7 +1,6 @@
 .jumbotron {
-	background:
-		url('/images/SpringCoreJumbotron.jpg')
-		no-repeat center center;
+	background: url('/images/SpringCoreJumbotron.jpg') no-repeat center
+		center;
 	height: 350px;
 	color: white;
 	text-shadow: #444 0 1px 1px;
@@ -17,6 +16,21 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857;
+}
+
+.center-img {
+	width: 90%;
+	height: auto;
+	transform: translateX(-50%);
+  left: 50%;  
+  position: relative;
+  border-radius: 5%;
+}
+
+.center-element {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .row {
