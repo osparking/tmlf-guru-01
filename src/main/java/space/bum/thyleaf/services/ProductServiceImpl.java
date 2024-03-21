@@ -84,7 +84,7 @@ public class ProductServiceImpl implements ProductService {
         + "가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 상처가 있는 부위 "
         + "등에는 사용을 자제할 것 보관 및 취급 시의 주의사항 - 어린이의 손이 닿지 않는 곳에 보관할"
         + " 것, 직사관선을 피해서 보관할 것 눈에 들어갔을 때에는 즉시 씻어낼 것");
-    springIntro.setPrice(new BigDecimal("0"));
+    springIntro.setPrice(new BigDecimal("4270"));
     springIntro.setImageUrl("bumsoap-regular.jpg");
     springIntro.getProductCategories().add(springIntroCat);
     springIntro.getProductCategories().add(springBootCat);
@@ -103,7 +103,7 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    springCoreUltimate.setPrice(new BigDecimal("199"));
+    springCoreUltimate.setPrice(new BigDecimal("0"));
     springCoreUltimate.setImageUrl("SpringCoreUltimateThumb.png");
     springCoreUltimate.getProductCategories().add(springCoreCat);
     springCoreUltimate.getProductCategories().add(springBootCat);

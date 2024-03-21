@@ -173,11 +173,14 @@ img {
 						th:src="@{'/images/' + ${product.author.image}}"
 						class="img-thumbnail rounded-circle" style='width: 45px'>
 					<div class="small course-author-name"
-						th:text="${product.author.lastName} + ' ' + ${product.author.firstName}">
+						th:text="${product.author.lastName} + ' ' + 
+						  ${product.author.firstName}">
 						비누 생산자</div>
 				</div>
 				<div class="col-4">
-					<div class="small course-price" th:text="${'$'+ product.price}">가격</div>
+					<div class="small course-price"
+						th:text="${product.price > 0 ? 
+						  #numbers.formatCurrency(product.price) : '공짜'}">가격</div>
 				</div>
 			</div>
 			<div class="col-md-4 offset-md-6">
