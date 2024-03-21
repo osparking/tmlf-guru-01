@@ -62,7 +62,7 @@ public class ProductServiceImpl implements ProductService {
 
     Product springIntro = new Product();
     springIntro.setId(1);
-    springIntro.setCourseName("범이비누");
+    springIntro.setCourseName("보통비누");
     springIntro.setCourseSubtitle("올리브오일 엑스트라버진 수제비누!");
     springIntro.setAuthor(pj);
     springIntro.setCourseDescription("제료: 올리브유 엑스트라 버진, 제주비자나무향오일, "
