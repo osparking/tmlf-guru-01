@@ -179,8 +179,7 @@ img {
 				</div>
 				<div class="col-4">
 					<div class="small course-price"
-						th:text="${product.price > 0 ? 
-						  #numbers.formatCurrency(product.price) : '공짜'}">가격</div>
+						th:text="${product.price > 0 ? product.priceStr : '공짜'}">가격</div>
 				</div>
 			</div>
 			<div class="col-md-4 offset-md-6">
