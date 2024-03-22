@@ -141,8 +141,18 @@ img {
 			<div class="col-md-12">
 				<h1 th:text="#{index.courses.headline}"></h1>
 			</div>
-		</div>
-		<div class="row course-list list">
+		</div>		
+    <table>
+      <tr>
+        <th>아이디</th>
+        <th>과목명</th>
+      </tr>
+      <tr th:each="product: ${products}">
+        <td th:text="${product.id}">상품ID</td>
+        <td th:text="${product.courseName}">상품명칭</td>
+      </tr>
+		</table>		
+		<div class="row course-list list" th:remove="all">
 			<div class="col-md-4">
 				<div class="course-listing">
 					<div class="row">
@@ -241,7 +251,7 @@ img {
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" th:remove="all">
 			<div class="col-md-4">
 				<div class="course-listing">
 					<div class="row">
