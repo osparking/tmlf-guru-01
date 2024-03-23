@@ -23,6 +23,10 @@ public class Product {
   public void setPrice(BigDecimal price, Locale locale) {
     this.price = price;
     NumberFormat cuFmt = NumberFormat.getCurrencyInstance(locale);
-    this.priceStr = cuFmt.format(price);
+    if (price.compareTo(BigDecimal.ZERO) == 0) {
+      this.priceStr = "공짜";
+    } else  {
+      this.priceStr = cuFmt.format(price);
+    }
   }
 }
