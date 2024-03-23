@@ -16,12 +16,13 @@
 							th:src="@{'/images/' + ${product.imageUrl}}" class="center-img">
 					</a>
 					<div class="course-listing-title">
-						<a href="product/1" class="course-listing-title">Introduction
-							to Spring</a>
+						<a href="product/1" class="course-listing-title"
+							th:text="${product.courseName}">Introduction to Spring</a>
 					</div>
 					<div class="course-listing-subtitle">
-						<a href="product/1" class="course-listing-subtitle">Introductory
-							Course for the Spring Framework</a>
+						<a href="product/1" class="course-listing-subtitle"
+							th:text="${product.courseSubtitle}">Introductory Course for
+							the Spring Framework</a>
 					</div>
 				</div>
 			</div>
