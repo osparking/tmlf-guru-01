@@ -124,7 +124,7 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    thymeleaf.setPrice(new BigDecimal("199"), Locale.KOREA);
+    thymeleaf.setPrice(new BigDecimal("4050"), Locale.KOREA);
     thymeleaf.setImageUrl("bumsoap-snow.jpg");
     thymeleaf.getProductCategories().add(thymeleafCat);
     productMap.put(3, thymeleaf);
@@ -142,7 +142,7 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    springCore.setPrice(new BigDecimal("199"), Locale.US);
+    springCore.setPrice(new BigDecimal("250"), Locale.US);
     springCore.setImageUrl("SpringCoreThumb.png");
     springCore.getProductCategories().add(springCoreCat);
     springCore.getProductCategories().add(springBootCat);
@@ -161,7 +161,7 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    springCoreAdv.setPrice(new BigDecimal("199"), Locale.US);
+    springCoreAdv.setPrice(new BigDecimal("150"), Locale.US);
     springCoreAdv.setImageUrl("SpringCoreAdvancedThumb.png");
     springCoreAdv.getProductCategories().add(springCoreCat);
     springCoreAdv.getProductCategories().add(springBootCat);
