@@ -94,7 +94,7 @@ public class ProductServiceImpl implements ProductService {
     Product springCoreUltimate = new Product();
     springCoreUltimate.setId(2);
     springCoreUltimate.setCourseName("메주비누");
-    springCoreUltimate.setCourseSubtitle("Ultimate Bundle of Spring Core!");
+    springCoreUltimate.setCourseSubtitle("올리브오일 엑스트라버진 수제비누 - 메주 패턴 외형!");
     springCoreUltimate.setAuthor(pj);
     springCoreUltimate.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
@@ -114,7 +114,7 @@ public class ProductServiceImpl implements ProductService {
     Product thymeleaf = new Product();
     thymeleaf.setId(3);
     thymeleaf.setCourseName("백설공주");
-    thymeleaf.setCourseSubtitle("Thymeleaf and Spring!");
+    thymeleaf.setCourseSubtitle("올리브오일 수제비누 - 백설은 소다회!");
     thymeleaf.setAuthor(pj);
     thymeleaf.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
