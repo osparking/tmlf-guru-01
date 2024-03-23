@@ -145,7 +145,7 @@ img {
 
     <div class="row course-list list">
       <div class="row course-list list">
-        <div th:each="product,it: ${products}">
+        <div th:each="product,it: ${products}" class="col-md-4" >
           <div th:if="${it.count ge 1 and it.count le 3}">
             <div th:replace="fragments/productdiv :: productdiv"></div>
           </div>
@@ -155,7 +155,7 @@ img {
 
     <div class="row course-list list">
       <div class="row course-list list">
-        <div th:each="product,it: ${products}">
+        <div th:each="product,it: ${products}" class="col-md-4" >
           <div th:if="${it.count gt 3 and it.count lt 7}">
             <div th:replace="fragments/productdiv :: productdiv"></div>
           </div>
