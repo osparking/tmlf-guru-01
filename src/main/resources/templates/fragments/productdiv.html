@@ -30,12 +30,14 @@
 				<div class="col-8">
 					<img align="left" alt="John Thompson"
 						src="../../static/images/producer_pj.jpg"
-						th:src="@{/images/instructor_jt.jpg}"
+						th:src="@{'/images/' + ${product.author.image}}"
 						class="img-thumbnail rounded-circle" style='width: 45px'>
-					<div class="small course-author-name">John Thompson</div>
+					<div class="small course-author-name"
+						th:text="${product.author.lastName + ', ' + 
+						         product.author.firstName}">박종범</div>
 				</div>
 				<div class="col-4">
-					<div class="small course-price">FREE</div>
+					<div class="small course-price" th:text="${product.priceStr}">FREE</div>
 				</div>
 			</div>
 		</div>
