@@ -106,7 +106,7 @@ public class ProductServiceImpl implements ProductService {
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
     springCoreUltimate.setPrice(new BigDecimal("0"), Locale.KOREA);
     
-    springCoreUltimate.setImageUrl("SpringCoreUltimateThumb.png");
+    springCoreUltimate.setImageUrl("bumsoap-meju.jpg");
     springCoreUltimate.getProductCategories().add(springCoreCat);
     springCoreUltimate.getProductCategories().add(springBootCat);
     productMap.put(2, springCoreUltimate);
@@ -125,7 +125,7 @@ public class ProductServiceImpl implements ProductService {
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
     thymeleaf.setPrice(new BigDecimal("199"), Locale.KOREA);
-    thymeleaf.setImageUrl("ThymeleafThumb.png");
+    thymeleaf.setImageUrl("bumsoap-snow.jpg");
     thymeleaf.getProductCategories().add(thymeleafCat);
     productMap.put(3, thymeleaf);
 
