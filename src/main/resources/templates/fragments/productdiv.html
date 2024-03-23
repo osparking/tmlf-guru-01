@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>상품단편</title>
+</head>
+<body>
+	<div class="col-md-4">
+		<div class="course-listing">
+			<div class="row">
+				<div class="col-lg-12">
+					<a href="product/1" class="center-element">
+						<img role="presentation"
+							src="https://soap-images.pages.dev/bumsoap-regular.jpg"
+							th:src="@{/images/bumsoap-regular.jpg}" class="center-img">
+					</a>
+					<div class="course-listing-title">
+						<a href="product/1" class="course-listing-title">Introduction
+							to Spring</a>
+					</div>
+					<div class="course-listing-subtitle">
+						<a href="product/1" class="course-listing-subtitle">Introductory
+							Course for the Spring Framework</a>
+					</div>
+				</div>
+			</div>
+			<div class="row course-listing-extra-info col-12">
+				<div class="col-8">
+					<img align="left" alt="John Thompson"
+						src="https://d2vvqscadf4c1f.cloudfront.net/uZC7XjnzTMyJJeq5hShi_IMG_2800square.jpg"
+						th:src="@{/images/instructor_jt.jpg}"
+						class="img-thumbnail rounded-circle" style='width: 45px'>
+					<div class="small course-author-name">John Thompson</div>
+				</div>
+				<div class="col-4">
+					<div class="small course-price">FREE</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
