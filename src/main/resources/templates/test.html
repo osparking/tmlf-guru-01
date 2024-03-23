@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{index.page.title}">페이지 제목</title>
+<link href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
+<script src="../static/js/jquery-3.7.1.min.js"
+	th:src="@{/js/jquery-3.7.1.min.js}"></script>
+<style>
+.flex-container {
+	display: flex;
+	background-color: DodgerBlue;
+}
+
+.flex-container>div {
+	background-color: #f1f1f1;
+	margin: 10px 0px;
+	padding: 20px;
+	font-size: 30px;
+}
+</style>
+</head>
+<body>
+	<h1>Create a Flex Container</h1>
+	<div class="row flex-container">
+		<div class="col-md-2" th:each="product: ${products}">
+			<div th:replace="fragments/namediv :: namediv"></div>
+		</div>
+	</div>
+</body>
+</html>
