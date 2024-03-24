@@ -181,15 +181,17 @@ img {
 					<div class="small course-price" th:text="${product.priceStr}">가격</div>
 				</div>
 			</div>
-			
+
 			<div class="row col-xs-12">
-			 <ol class="breadcrumb">
-			   <li class="breadcrumb-item"><a href="#">범주 1</a></li>
-			   <li class="breadcrumb-item"><a href="#">범주 2</a></li>
-			   <li class="breadcrumb-item"><a href="#">범주 3</a></li>
-			 </ol>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">범주 1</a></li>
+					<li class="breadcrumb-item"><a href="#">범주 2</a></li>
+					<li class="breadcrumb-item"><a href="#">범주 3</a></li>
+					<li class="breadcrumb-item"
+						th:text="${'범주 수: ' + product.productCategories.size}">범주수: 3</li>
+				</ol>
 			</div>
-			
+
 			<div class="col-md-4 offset-md-6">
 				<button type="button" class="btn btn-success"
 					th:text="#{product.button.buy}">버튼텍스트</button>
