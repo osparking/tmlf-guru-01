@@ -45,9 +45,9 @@ public class ProductServiceImpl implements ProductService {
     jt.setId(1);
     jt.setImage("instructor_jt.jpg");
 
-    ProductCategory springIntroCat = new ProductCategory();
-    springIntroCat.setId(1);
-    springIntroCat.setCategory("Spring Introduction");
+    ProductCategory skinHealthCat = new ProductCategory();
+    skinHealthCat.setId(1);
+    skinHealthCat.setCategory("피부 건강 제품");
 
     ProductCategory springCoreCat = new ProductCategory();
     springCoreCat.setId(2);
@@ -57,9 +57,9 @@ public class ProductServiceImpl implements ProductService {
     springBootCat.setId(3);
     springBootCat.setCategory("Spring Boot");
 
-    ProductCategory thymeleafCat = new ProductCategory();
-    thymeleafCat.setId(4);
-    thymeleafCat.setCategory("Thymeleaf");
+    ProductCategory discountCat = new ProductCategory();
+    discountCat.setId(4);
+    discountCat.setCategory("특가 상품");
 
     ProductCategory geapCat = new ProductCategory();
     geapCat.setId(5);
@@ -67,12 +67,12 @@ public class ProductServiceImpl implements ProductService {
 
     productMap = new HashMap<>();
 
-    Product springIntro = new Product();
-    springIntro.setId(1);
-    springIntro.setCourseName("보통비누");
-    springIntro.setCourseSubtitle("올리브오일 엑스트라버진 수제비누!");
-    springIntro.setAuthor(pj);
-    springIntro.setCourseDescription("제료: 올리브유 엑스트라 버진, 제주비자나무향오일, "
+    Product soapRegular = new Product();
+    soapRegular.setId(1);
+    soapRegular.setCourseName("보통비누");
+    soapRegular.setCourseSubtitle("올리브오일 엑스트라버진 수제비누!");
+    soapRegular.setAuthor(pj);
+    soapRegular.setCourseDescription("제료: 올리브유 엑스트라 버진, 제주비자나무향오일, "
         + "어성초 분말, 율무씨가루 - 제주비자향에 리모넨"
         + " 및 시트랄 성분이 있으므로, 레몬 혹은 오렌지 알레르기가 있는 분은 주의해서 사용하십시오."
         + " 지성 및 건성용. 피부 및 두피용, 아이보리색 및 밤색 2중 색상.\n" +
@@ -85,18 +85,17 @@ public class ProductServiceImpl implements ProductService {
         + "가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 상처가 있는 부위 "
         + "등에는 사용을 자제할 것 보관 및 취급 시의 주의사항 - 어린이의 손이 닿지 않는 곳에 보관할"
         + " 것, 직사관선을 피해서 보관할 것 눈에 들어갔을 때에는 즉시 씻어낼 것");
-    springIntro.setPrice(new BigDecimal("4270"), Locale.KOREA);
-    springIntro.setImageUrl("bumsoap-regular.jpg");
-    springIntro.getProductCategories().add(springIntroCat);
-    springIntro.getProductCategories().add(springBootCat);
-    productMap.put(1, springIntro);
+    soapRegular.setPrice(new BigDecimal("4270"), Locale.KOREA);
+    soapRegular.setImageUrl("bumsoap-regular.jpg");
+    soapRegular.getProductCategories().add(skinHealthCat);
+    productMap.put(1, soapRegular);
 
-    Product springCoreUltimate = new Product();
-    springCoreUltimate.setId(2);
-    springCoreUltimate.setCourseName("메주비누");
-    springCoreUltimate.setCourseSubtitle("올리브오일 엑스트라버진 수제비누 - 메주 패턴 외형!");
-    springCoreUltimate.setAuthor(pj);
-    springCoreUltimate.setCourseDescription(
+    Product soapMeju = new Product();
+    soapMeju.setId(2);
+    soapMeju.setCourseName("메주비누");
+    soapMeju.setCourseSubtitle("올리브오일 엑스트라버진 수제비누 - 메주 패턴 외형!");
+    soapMeju.setAuthor(pj);
+    soapMeju.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
             +
             "\n" +
@@ -104,19 +103,19 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    springCoreUltimate.setPrice(new BigDecimal("0"), Locale.KOREA);
+    soapMeju.setPrice(new BigDecimal("0"), Locale.KOREA);
     
-    springCoreUltimate.setImageUrl("bumsoap-meju.jpg");
-    springCoreUltimate.getProductCategories().add(springCoreCat);
-    springCoreUltimate.getProductCategories().add(springBootCat);
-    productMap.put(2, springCoreUltimate);
+    soapMeju.setImageUrl("bumsoap-meju.jpg");
+    soapMeju.getProductCategories().add(discountCat);
+    soapMeju.getProductCategories().add(skinHealthCat);
+    productMap.put(2, soapMeju);
 
-    Product thymeleaf = new Product();
-    thymeleaf.setId(3);
-    thymeleaf.setCourseName("백설공주");
-    thymeleaf.setCourseSubtitle("올리브오일 수제비누 - 백설은 소다회!");
-    thymeleaf.setAuthor(pj);
-    thymeleaf.setCourseDescription(
+    Product soapSnowWhite = new Product();
+    soapSnowWhite.setId(3);
+    soapSnowWhite.setCourseName("백설공주");
+    soapSnowWhite.setCourseSubtitle("올리브오일 수제비누 - 백설은 소다회!");
+    soapSnowWhite.setAuthor(pj);
+    soapSnowWhite.setCourseDescription(
         "Why would you want to learn about the Spring Framework? Simple, Spring is the most widely used framework in the enterprise today. Major companies all over the world are hiring programmers who know the Spring Framework.\n"
             +
             "\n" +
@@ -124,10 +123,11 @@ public class ProductServiceImpl implements ProductService {
             +
             "\n" +
             "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
-    thymeleaf.setPrice(new BigDecimal("4050"), Locale.KOREA);
-    thymeleaf.setImageUrl("bumsoap-snow.jpg");
-    thymeleaf.getProductCategories().add(thymeleafCat);
-    productMap.put(3, thymeleaf);
+    soapSnowWhite.setPrice(new BigDecimal("4050"), Locale.KOREA);
+    soapSnowWhite.setImageUrl("bumsoap-snow.jpg");
+    soapSnowWhite.getProductCategories().add(discountCat);
+    soapSnowWhite.getProductCategories().add(skinHealthCat);
+    productMap.put(3, soapSnowWhite);
 
     Product springCore = new Product();
     springCore.setId(4);
@@ -164,6 +164,7 @@ public class ProductServiceImpl implements ProductService {
     springCoreAdv.setPrice(new BigDecimal("150"), Locale.US);
     springCoreAdv.setImageUrl("SpringCoreAdvancedThumb.png");
     springCoreAdv.getProductCategories().add(springCoreCat);
+    springCoreAdv.getProductCategories().add(discountCat);
     springCoreAdv.getProductCategories().add(springBootCat);
     productMap.put(5, springCoreAdv);
 
@@ -184,7 +185,8 @@ public class ProductServiceImpl implements ProductService {
     springCoreDevOps.setPrice(new BigDecimal("199"), Locale.US);
     springCoreDevOps.setImageUrl("SpringCoreDevOpsThumb.png");
     springCoreDevOps.getProductCategories().add(springCoreCat);
-    springCoreDevOps.getProductCategories().add(springBootCat);
+    springCoreDevOps.getProductCategories().add(springCoreCat);
+    springCoreDevOps.getProductCategories().add(geapCat);
     productMap.put(6, springCoreDevOps);
   }
 }
