@@ -144,10 +144,40 @@ img {
 			</div>
 		</div>
 		<div class="row">
-			<div class="d-flex col-md-6 justify-content-center">
-				<img role="presentation"
-					src="https://soap-images.pages.dev/bumsoap-regular.jpg"
-					th:src="@{'/images/' + ${product.imageUrl}}" class="center-block">
+			<div class="col-md-6">
+				<div class="d-flex justify-content-center">
+					<img role="presentation"
+						src="https://soap-images.pages.dev/bumsoap-regular.jpg"
+						th:src="@{'/images/' + ${product.imageUrl}}" class="center-block">
+				</div>
+				<div class="row">
+					<div class="row course-listing-extra-info">
+						<div class="col-8 center-list">
+							<img align="left" alt="John Thompson"
+								src="../static/images/instructor_jt.jpg"
+								th:src="@{'/images/' + ${product.author.image}}"
+								class="img-thumbnail rounded-circle" style='width: 45px'>
+							<div class="small course-author-name"
+								th:text="${product.author.lastName} + ' ' + 
+              ${product.author.firstName}">
+								비누 생산자</div>
+						</div>
+						<div class="col-4">
+							<div class="small course-price" th:text="${product.priceStr}">가격</div>
+						</div>
+					</div>
+					<div class="center-list">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"
+								th:each="cat: ${product.productCategories}"><a href="#"
+									th:text="${cat.category}">범주 1</a></li>
+							<li class="breadcrumb-item" th:remove="all"><a href="#">범주
+									2</a></li>
+							<li class="breadcrumb-item" th:remove="all"><a href="#">범주
+									3</a></li>
+						</ol>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6">
 				<div>
@@ -163,38 +193,10 @@ img {
 						대통령은 이를 해제하여야 한다. 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야
 						한다.</p>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="row course-listing-extra-info col-6">
-				<div class="col-8">
-					<img align="left" alt="John Thompson"
-						src="../static/images/instructor_jt.jpg"
-						th:src="@{'/images/' + ${product.author.image}}"
-						class="img-thumbnail rounded-circle" style='width: 45px'>
-					<div class="small course-author-name"
-						th:text="${product.author.lastName} + ' ' + 
-						  ${product.author.firstName}">
-						비누 생산자</div>
+				<div>
+					<button type="button" class="btn btn-success center-element"
+						th:text="#{product.button.buy}">버튼텍스트</button>
 				</div>
-				<div class="col-4">
-					<div class="small course-price" th:text="${product.priceStr}">가격</div>
-				</div>
-			</div>
-
-			<div class="row col-xs-12 center-element">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item" th:each="cat: ${product.productCategories}">
-						<a href="#" th:text="${cat.category}">범주 1</a>
-					</li>
-					<li class="breadcrumb-item" th:remove="all"><a href="#">범주 2</a></li>
-					<li class="breadcrumb-item" th:remove="all"><a href="#">범주 3</a></li>
-				</ol>
-			</div>
-
-			<div class="col-md-4 offset-md-6">
-				<button type="button" class="btn btn-success"
-					th:text="#{product.button.buy}">버튼텍스트</button>
 			</div>
 		</div>
 	</div>
