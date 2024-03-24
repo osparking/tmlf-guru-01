@@ -182,13 +182,13 @@ img {
 				</div>
 			</div>
 
-			<div class="row col-xs-12">
+			<div class="row col-xs-12 center-element">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">범주 1</a></li>
-					<li class="breadcrumb-item"><a href="#">범주 2</a></li>
-					<li class="breadcrumb-item"><a href="#">범주 3</a></li>
-					<li class="breadcrumb-item"
-						th:text="${'범주 수: ' + product.productCategories.size}">범주수: 3</li>
+					<li class="breadcrumb-item" th:each="cat: ${product.productCategories}">
+						<a href="#" th:text="${cat.category}">범주 1</a>
+					</li>
+					<li class="breadcrumb-item" th:remove="all"><a href="#">범주 2</a></li>
+					<li class="breadcrumb-item" th:remove="all"><a href="#">범주 3</a></li>
 				</ol>
 			</div>
 
