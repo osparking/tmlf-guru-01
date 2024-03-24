@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title th:text="#{index.page.title}">범이비누 비누 종류</title>
+<title th:text="#{index.page.title}">범이비누 한 유형</title>
 <link href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
@@ -178,8 +178,7 @@ img {
 						비누 생산자</div>
 				</div>
 				<div class="col-4">
-					<div class="small course-price"
-						th:text="${product.priceStr}">가격</div>
+					<div class="small course-price" th:text="${product.priceStr}">가격</div>
 				</div>
 			</div>
 			<div class="col-md-4 offset-md-6">
