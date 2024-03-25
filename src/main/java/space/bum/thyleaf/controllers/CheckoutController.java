@@ -14,7 +14,9 @@ public class CheckoutController {
 
   @GetMapping("/checkout")
   public String checkoutProduct(Model model) {
-    model.addAttribute("checkoutCommand", new CheckoutCommand());
+    var cmd = new CheckoutCommand();
+    cmd.setFirstName("길동");
+    model.addAttribute("checkoutCommand", cmd);
     return "checkoutform";
   }
 
@@ -22,11 +24,11 @@ public class CheckoutController {
   public String checkoutProduct(@Valid CheckoutCommand command,
       BindingResult result) {
     
-    if (result.hasErrors()) {
-      return "checkoutform";
-    } else {
+//    if (result.hasErrors()) {
+//      return "checkoutform";
+//    } else {
       return "checkoutdone";
-    }
+//    }
   }
 
 }
