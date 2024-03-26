@@ -9,11 +9,11 @@ import lombok.Data;
 @Data
 public class CheckoutCommand {
   @NotEmpty
-  @Size(min = 2, max = 50)
+  @Size(min = 1, max = 2)
   private String lastName;
   
   @NotEmpty
-  @Size(min = 2, max = 50)
+  @Size(min = 1, max = 5)
   private String firstName;
 
   @NotEmpty
