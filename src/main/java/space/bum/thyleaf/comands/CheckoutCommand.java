@@ -1,6 +1,7 @@
 package space.bum.thyleaf.comands;
 
 
+import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -24,7 +25,8 @@ public class CheckoutCommand {
   @Size(min = 2, max = 50)
   private String city;
 
-  @NotEmpty
-  @Size(min = 5, max = 10)
+  @NotEmpty(message = "{zipCode.notempty}")
+  @Size(min = 5, max = 5, message = "{zipCode.size}")
+  @Digits(integer=5,fraction=0)
   private String zipCode;
 }
