@@ -17,31 +17,36 @@
 		<form class="form-horizontal" th:object="${checkoutCommand}"
 			th:action="@{/docheckout}" method="post">
 
-        <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-            <p th:text="#{checkoutCommand.hasErrors}">Error Message</p>
-        </div>
+			<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+				<p th:text="#{checkoutCommand.hasErrors}">Error Message</p>
+			</div>
 
-      <div class="row mb-3 mt-3 form-group">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="우편번호"
-            th:field="*{zipCode}" />
-          <div class="alert alert-warning"
-            th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}">
-          </div>
-        </div>
-      </div>
-
-			<div class="row mb-3 ">
+			<div class="row mb-3 mt-3 form-group">
 				<div class="col">
-					<input type="text" class="form-control" placeholder="광역시도"
-						th:field="*{city}" />
+					<input type="text" class="form-control" placeholder="우편번호"
+						th:field="*{zipCode}" />
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}">
+					</div>
 				</div>
 			</div>
 
 			<div class="row mb-3 ">
 				<div class="col">
+					<input type="text" class="form-control" placeholder="광역시도"
+						th:field="*{city}" />
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></div>
+				</div>
+			</div>
+
+			<div class="row mb-3 form-group">
+				<div class="col">
 					<input type="text" class="form-control" placeholder="도로명 주소"
 						th:field="*{addressLine1}" />
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('addressLine1')}"
+						th:errors="*{addressLine1}"></div>
 				</div>
 			</div>
 
@@ -56,10 +61,16 @@
 				<div class="col">
 					<input type="text" class="form-control" placeholder="성씨"
 						aria-label="성씨" th:field="*{lastName}">
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">
+					</div>
 				</div>
 				<div class="col">
 					<input type="text" class="form-control" placeholder="이름"
 						aria-label="이름" th:field="*{firstName}">
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">
+					</div>
 				</div>
 			</div>
 
