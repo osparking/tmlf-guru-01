@@ -21,12 +21,15 @@
             <p th:text="#{checkoutCommand.hasErrors}">Error Message</p>
         </div>
 
-			<div class="row mb-3 mt-3 form-group">
-				<div class="col">
-					<input type="text" class="form-control" placeholder="우편번호"
-						th:field="*{zipCode}" />
-				</div>
-			</div>
+      <div class="row mb-3 mt-3 form-group">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="우편번호"
+            th:field="*{zipCode}" />
+          <div class="alert alert-warning"
+            th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}">
+          </div>
+        </div>
+      </div>
 
 			<div class="row mb-3 ">
 				<div class="col">
