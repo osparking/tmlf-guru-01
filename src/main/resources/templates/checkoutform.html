@@ -17,6 +17,10 @@
 		<form class="form-horizontal" th:object="${checkoutCommand}"
 			th:action="@{/docheckout}" method="post">
 
+        <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+            <p th:text="#{checkoutCommand.hasErrors}">Error Message</p>
+        </div>
+
 			<div class="row mb-3 mt-3 form-group">
 				<div class="col">
 					<input type="text" class="form-control" placeholder="우편번호"
