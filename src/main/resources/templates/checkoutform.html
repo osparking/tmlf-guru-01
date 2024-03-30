@@ -54,6 +54,9 @@
 				<div class="col">
 					<input type="text" class="form-control" placeholder="상세 주소"
 						th:field="*{addressLine2}" />
+					<div class="alert alert-warning"
+						th:if="${#fields.hasErrors('addressLine2')}"
+						th:errors="*{addressLine2}"></div>
 				</div>
 			</div>
 
