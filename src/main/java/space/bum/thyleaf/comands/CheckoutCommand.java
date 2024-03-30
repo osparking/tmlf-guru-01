@@ -9,7 +9,6 @@ import lombok.Data;
 @Data
 public class CheckoutCommand {
   @NotEmpty
-  @Size(min = 1, max = 2)
   private String lastName;
   
   @NotEmpty
