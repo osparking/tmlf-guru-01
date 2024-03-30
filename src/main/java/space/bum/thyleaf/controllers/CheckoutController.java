@@ -21,10 +21,10 @@ public class CheckoutController {
     model.addAttribute("checkoutCommand", new CheckoutCommand());
     return "checkoutform";
   }
-  
+
   @Autowired
   LocaleResolver localeResolver;
-  
+
   @PostMapping("/docheckout")
   public String checkoutProduct(@Valid CheckoutCommand command,
       BindingResult result, HttpServletRequest request) {
@@ -33,7 +33,7 @@ public class CheckoutController {
      */
     String lastNLenError = null;
     int lastNLen = command.getLastName().trim().length();
-    
+
     switch (localeResolver.resolveLocale(request).getLanguage()) {
     case "ko":
       if (lastNLen == 0 || lastNLen > 2)
@@ -47,7 +47,7 @@ public class CheckoutController {
     }
     if (lastNLenError != null)
       result.addError(new FieldError("command", "lastName", lastNLenError));
-    
+
     if (result.hasErrors()) {
       return "checkoutform";
     } else {
