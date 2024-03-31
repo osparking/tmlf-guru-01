@@ -26,8 +26,7 @@ public class CheckoutCommand {
   @Size(min = 2, max = 50)
   private String city;
 
-  @NotEmpty(message = "{zipCode.notempty}")
-  @Size(min = 5, max = 5, message = "{zipCode.size}")
+  @NotEmpty
   @Pattern(regexp="\\d{5}")
   private String zipCode;
 }
