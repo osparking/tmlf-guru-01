@@ -11,8 +11,8 @@
 <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
 </head>
 <body class="bg-dark">
-	<h2 class="mt-5 text-center-h text-light" th:text="#{login.page.h2}">
-		로그인 자격 정보</h2>
+	<h2 class="mt-5 text-center text-light" th:text="#{login.page.h2}">
+		로그인</h2>
 	<form th:object="${credential}" th:action="@{/welcome}" method="post">
 		<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger m-auto">
 			<p class="m-0 text-center" th:text="#{credential.hasErrors}" >오류메시지</p>
