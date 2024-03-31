@@ -23,8 +23,9 @@
 
 			<div class="row mb-3 mt-3 form-group">
 				<div class="col">
-					<input type="text" class="form-control" th:class="form-control"
-						th:classappend="${#fields.hasErrors('zipCode')} ? 'is-invalid'"
+					<input type="text" class="form-control" 
+					  th:class="'form-control ' + 
+					    ${#fields.hasErrors('zipCode') ? 'is-invalid' : ''}"
 						placeholder="우편번호"
 						th:placeholder="#{checkoutform.page.input.zipCode}"
 						th:field="*{zipCode}" />
