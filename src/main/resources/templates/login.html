@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{login.page.title}">로그인 폼</title>
+<link href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
+<script src="../static/js/jquery-3.7.1.min.js"
+	th:src="@{/js/jquery-3.7.1.min.js}"></script>
+<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
+</head>
+<body class="bg-dark">
+	<h2 class="mt-5 text-center-h text-light" th:text="#{login.page.h2}">
+		로그인 자격 정보</h2>
+	<form th:object="${credential}" th:action="@{/welcome}" method="post">
+		<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger m-auto">
+			<p class="m-0 text-center" th:text="#{credential.hasErrors}" >오류메시지</p>
+		</div>
+		<div class="mb-3">
+			<div class="container col-4" style="width: 300px;">
+				<input type="text" class="form-control"
+					th:class="'form-control ' + 
+					    ${#fields.hasErrors('userid') ? 'is-invalid' : ''}"
+					placeholder="아이디" th:placeholder="#{login.page.input.userid}"
+					th:field="*{userid}" />
+			</div>
+			<div class="container col-8" style="width: 450px;">
+				<div class="alert alert-warning"
+					th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}">
+				</div>
+			</div>
+		</div>
+		<div class="mb-3">
+			<div class="container col-4" style="width: 300px;">
+				<input type="password" class="form-control" th:class="form-control"
+					th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'"
+					placeholder="비밀번호" th:placeholder="#{login.page.input.password}"
+					th:field="*{password}" />
+				<div class="alert alert-warning"
+					th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+			</div>
+		</div>
+		<div class="mb-3 d-flex col-12 justify-content-center">
+			<button type="submit" class="btn btn-primary"
+				th:text="#{login.page.input.submit}">로그인</button>
+		</div>
+	</form>
+</body>
+</html>
