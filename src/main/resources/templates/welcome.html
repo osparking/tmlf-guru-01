@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>사용자 환영</title>
+<link href="../static/css/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	th:href="@{/css/bootstrap-5.3.3-dist/css/bootstrap.min.css}">
+<script src="../static/js/jquery-3.7.1.min.js"
+	th:src="@{/js/jquery-3.7.1.min.js}"></script>
+
+<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+	<div class="m-5 bg-primary clearfix text-light align-middle">
+		<div class="float-start align-middle">
+			<h1 th:text="${'환영합니다.'}">인사말</h1>
+		</div>
+		<div class="p-3 float-end align-middle">
+			<p th:text="${'아이디: ' + credential.userid}">사용자 ID</p>
+		</div>
+	</div>
+</body>
+</html>
