@@ -137,32 +137,32 @@ img {
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 th:text="#{index.courses.headline}"></h1>
+		<div class="row m-2 bg-primary clearfix text-light align-middle">
+			<div class="col-md-6">
+				<h1 class="m-3" th:text="#{index.courses.headline}"></h1>
 			</div>
-		</div>		
-
-    <div class="row course-list list">
-      <div class="row course-list list">
-        <div th:each="product,it: ${products}" class="col-md-4" >
-          <div th:if="${it.count ge 1 and it.count le 3}">
-            <div th:replace="fragments/productdiv :: productdiv"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row course-list list">
-      <div class="row course-list list">
-        <div th:each="product,it: ${products}" class="col-md-4" >
-          <div th:if="${it.count gt 3 and it.count lt 7}">
-            <div th:replace="fragments/productdiv :: productdiv"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-	
+			<div class="row col-md-6 text-light text-end d-flex">
+				<p class="mt-auto mb-auto" th:text="${'환영합니다. 아이디: ' + userid}">사용자 ID</p>
+			</div>
+		</div>
+		<div class="row course-list list">
+			<div class="row course-list list">
+				<div th:each="product,it: ${products}" class="col-md-4">
+					<div th:if="${it.count ge 1 and it.count le 3}">
+						<div th:replace="fragments/productdiv :: productdiv"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row course-list list">
+			<div class="row course-list list">
+				<div th:each="product,it: ${products}" class="col-md-4">
+					<div th:if="${it.count gt 3 and it.count lt 7}">
+						<div th:replace="fragments/productdiv :: productdiv"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="row course-list list" th:remove="all">
 			<div class="col-md-4">
 				<div class="course-listing">
@@ -174,7 +174,8 @@ img {
 									th:src="@{/images/bumsoap-regular.jpg}" class="center-img">
 							</a>
 							<div class="course-listing-title">
-								<a href="product/1" class="course-listing-title">Introduction to Spring</a>
+								<a href="product/1" class="course-listing-title">Introduction
+									to Spring</a>
 							</div>
 							<div class="course-listing-subtitle">
 								<a href="product/1" class="course-listing-subtitle">Introductory
@@ -267,7 +268,7 @@ img {
 				<div class="course-listing">
 					<div class="row">
 						<a data-role="course-box-link" href="product/4">
-						  <div class="col-lg-12">
+							<div class="col-lg-12">
 								<div class="course-box-image-container">
 									<img role="presentation"
 										src="https://d2vvqscadf4c1f.cloudfront.net/wc9ORhpRQUataALq2ejc_ThumbSPRINcoreDevOps2.png"
