@@ -11,40 +11,49 @@
 <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
 </head>
 <body class="bg-dark">
-	<h2 class="mt-5 text-center text-light" th:text="#{login.page.h2}">
-		로그인</h2>
-	<form th:object="${credential}" th:action="@{/welcome}" method="post">
-		<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger m-auto">
-			<p class="m-0 text-center" th:text="#{credential.hasErrors}" >오류메시지</p>
-		</div>
-		<div class="mb-3">
-			<div class="container col-4" style="width: 300px;">
-				<input type="text" class="form-control"
-					th:class="'form-control ' + 
+	<div class="container">
+		<div class="row">
+			<div class="w-30 col-4 offset-4 text-light">
+				<h2 th:text="#{login.page.h2}" class="mt-5">
+					로그인</h2>
+				<form th:object="${credential}" th:action="@{/welcome}"
+					method="post">
+					<div th:if="${#fields.hasErrors('*')}"
+						class="alert alert-danger m-auto">
+						<p class="m-0 text-center" th:text="#{credential.hasErrors}">오류메시지</p>
+					</div>
+					<div class="mb-3">
+						<div>
+							<input type="text" class="form-control"
+								th:class="'form-control ' + 
 					    ${#fields.hasErrors('userid') ? 'is-invalid' : ''}"
-					placeholder="아이디" th:placeholder="#{login.page.input.userid}"
-					th:field="*{userid}" />
-			</div>
-			<div class="container col-8" style="width: 450px;">
-				<div class="alert alert-warning"
-					th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}">
-				</div>
+								placeholder="아이디" th:placeholder="#{login.page.input.userid}"
+								th:field="*{userid}" />
+						</div>
+						<div>
+							<div class="alert alert-warning"
+								th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}">
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<div >
+							<input type="password" class="form-control"
+								th:class="form-control"
+								th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'"
+								placeholder="비밀번호" th:placeholder="#{login.page.input.password}"
+								th:field="*{password}" />
+							<div class="alert alert-warning"
+								th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+						</div>
+					</div>
+					<div class="mb-3 d-flex col-12 justify-content-center">
+						<button type="submit" class="btn btn-primary"
+							th:text="#{login.page.input.submit}">로그인</button>
+					</div>
+				</form>
 			</div>
 		</div>
-		<div class="mb-3">
-			<div class="container col-4" style="width: 300px;">
-				<input type="password" class="form-control" th:class="form-control"
-					th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'"
-					placeholder="비밀번호" th:placeholder="#{login.page.input.password}"
-					th:field="*{password}" />
-				<div class="alert alert-warning"
-					th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
-			</div>
-		</div>
-		<div class="mb-3 d-flex col-12 justify-content-center">
-			<button type="submit" class="btn btn-primary"
-				th:text="#{login.page.input.submit}">로그인</button>
-		</div>
-	</form>
+	</div>
 </body>
 </html>
