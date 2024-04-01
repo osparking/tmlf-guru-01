@@ -5,10 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
-import space.bum.thyleaf.comands.CheckoutCommand;
 import space.bum.thyleaf.domain.Credential;
 
 @Controller
@@ -22,13 +21,13 @@ public class LoginController {
 
   @PostMapping("/welcome")
   public String checkCredential(@Valid Credential credential,
-      BindingResult result, Model model) {
+      BindingResult result, Model model, RedirectAttributes redAttrs) {
     if (result.hasErrors()) {
       return "login";
     } else {
-      model.addAttribute("credential", credential);
       checkAccount(credential);
-      return "welcome";
+      redAttrs.addFlashAttribute("userid", credential.getUserid());
+      return "redirect:index";
     }
   }
 
