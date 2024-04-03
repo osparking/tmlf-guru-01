@@ -8,7 +8,7 @@ import lombok.Data;
 public class Credential {
   @NotEmpty
   @Pattern(regexp="[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){1,16}[a-zA-Z0-9]")
-  private String userid;
+  private String username;
   
   @NotEmpty
   private String password;
