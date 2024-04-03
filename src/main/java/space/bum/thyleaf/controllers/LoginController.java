@@ -26,7 +26,7 @@ public class LoginController {
       return "login";
     } else {
       checkAccount(credential);
-      redAttrs.addFlashAttribute("userid", credential.getUserid());
+      redAttrs.addFlashAttribute("userid", credential.getUsername());
       return "redirect:index";
     }
   }
