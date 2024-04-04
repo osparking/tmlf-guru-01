@@ -144,13 +144,23 @@ img {
 			</div>
 			<div th:if="${#authentication != null}"
 				class="row col-md-6 text-light text-end d-flex">
-				<p class="mt-auto mb-auto">
-					환영합니다 :
-					<span
-						th:text="${#authentication.principal ne 'anonymousUser' 
+				<div class="mt-auto mb-auto">
+					<p class="mb-0">
+						환영합니다 :
+						<span
+							th:text="${#authentication.principal ne 'anonymousUser' 
 							  ? #authentication.principal.username 
 	              : #authentication.principal}">사용자명</span>
-				</p>
+					</p>
+					<p class="mb-0">
+						<a href="/login"
+							th:href="${#authentication.principal eq 'anonymousUser' 
+							  ? '/login' : '/logout'}"
+							th:text="${#authentication.principal eq 'anonymousUser'}
+							  ? #{index.page.anchor.login} :  #{index.page.anchor.logout}"
+							class="text-light">로그인</a>
+					</p>
+				</div>
 			</div>
 		</div>
 		<div class="row course-list list">
