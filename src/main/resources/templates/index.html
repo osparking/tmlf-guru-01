@@ -142,12 +142,14 @@ img {
 			<div class="col-md-6">
 				<h1 class="m-3" th:text="#{index.courses.headline}"></h1>
 			</div>
-			<div class="row col-md-6 text-light text-end d-flex">
+			<div th:if="${#authentication != null}"
+				class="row col-md-6 text-light text-end d-flex">
 				<p class="mt-auto mb-auto">
 					환영합니다 :
 					<span
-						th:text="${#authentication != null ?
-             #authentication.principal.username : '로그인전'}">사용자명</span>
+						th:text="${#authentication.principal ne 'anonymousUser' 
+							  ? #authentication.principal.username 
+	              : #authentication.principal}">사용자명</span>
 				</p>
 			</div>
 		</div>
