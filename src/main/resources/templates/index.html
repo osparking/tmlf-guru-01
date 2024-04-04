@@ -148,16 +148,16 @@ img {
 					<p class="mb-0">
 						환영합니다 :
 						<span
-							th:text="${#authentication.principal ne 'anonymousUser' 
+							th:text="${#authorization.expression('isAuthenticated()') 
 							  ? #authentication.principal.username 
 	              : #authentication.principal}">사용자명</span>
 					</p>
 					<p class="mb-0">
 						<a href="/login"
-							th:href="${#authentication.principal eq 'anonymousUser' 
-							  ? '/login' : '/logout'}"
-							th:text="${#authentication.principal eq 'anonymousUser'}
-							  ? #{index.page.anchor.login} :  #{index.page.anchor.logout}"
+							th:href="${#authorization.expression('isAuthenticated()')}
+							  ? '/logout' : '/login'"
+							th:text="${#authorization.expression('isAuthenticated()')}
+							  ? #{index.page.anchor.logout} : #{index.page.anchor.login}"
 							class="text-light">로그인</a>
 					</p>
 				</div>
