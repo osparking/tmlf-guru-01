@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import space.bum.thyleaf.domain.Credential;
 import space.bum.thyleaf.services.ProductService;
 
 @Controller
@@ -20,7 +19,7 @@ public class HomeController {
   
   @GetMapping({"/", "/index"})
   public String home(Model model) {
-    model.addAttribute("userid", model.getAttribute("userid"));
+    model.addAttribute("username", model.getAttribute("username"));
     model.addAttribute("products", productService.listProducts());
     return "index";
   }
