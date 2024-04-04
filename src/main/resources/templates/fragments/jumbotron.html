@@ -131,6 +131,10 @@ img {
 <body>
 	<div class="jumbotron" th:fragment="jumbotron">
 		<div class="container">
+			<p class="lead" style="padding-top: 15px;">
+				<a href="/" th:text="#{jumbotron.page.anchor.home}"
+					class="text-light">가정</a>
+			</p>
 			<h1 style="padding-top: 90px; font-size: 60px;"
 				th:text="#{index.jumbotron.title}">큰 영상 영역 제목</h1>
 			<p class="lead" th:text="#{index.courses.tagline}">큰 영상 영역 태그라인</p>
