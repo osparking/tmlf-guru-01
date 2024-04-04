@@ -46,7 +46,8 @@ public class SecurityConfig {
                 "/docheckout")
             .permitAll())
         .authorizeHttpRequests(
-            requests -> requests.requestMatchers("/login", "logout")
+            requests -> requests
+                .requestMatchers("/login", "/logout", "/logout-success")
                 .permitAll())
         .authorizeHttpRequests(
             requests -> requests
@@ -58,9 +59,7 @@ public class SecurityConfig {
         .formLogin(authz -> authz.loginPage("/login").defaultSuccessUrl("/")
             .permitAll());
     http.logout(
-        authz -> authz.deleteCookies("remove").invalidateHttpSession(
-            true) // remove vs JSESSIONID
-            .logoutUrl("/logout")
+        authz -> authz.deleteCookies("JSESSIONID")
             .logoutSuccessUrl("/logout-success")
             .logoutRequestMatcher(new AntPathRequestMatcher("/logout")));
 
