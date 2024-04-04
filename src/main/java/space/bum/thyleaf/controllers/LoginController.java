@@ -34,4 +34,9 @@ public class LoginController {
   private void checkAccount(@Valid Credential credential) {
     // TODO Auto-generated method stub
   }
+
+  @GetMapping("/logout-success")
+  public String loginoutForm() {
+    return "logout-success";
+  }
 }
