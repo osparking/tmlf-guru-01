@@ -143,9 +143,12 @@ img {
 				<h1 class="m-3" th:text="#{index.courses.headline}"></h1>
 			</div>
 			<div class="row col-md-6 text-light text-end d-flex">
-				<p class="mt-auto mb-auto" th:text="${'환영합니다. 아이디: ' + username}">사용자
-					ID</p>
-				<div th:text="${#authentication.principal.username}">(ID)</div>
+				<p class="mt-auto mb-auto">
+					환영합니다 :
+					<span
+						th:text="${#authentication != null ?
+             #authentication.principal.username : '로그인전'}">사용자명</span>
+				</p>
 			</div>
 		</div>
 		<div class="row course-list list">
