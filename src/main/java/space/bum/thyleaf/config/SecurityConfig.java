@@ -12,6 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -39,16 +40,31 @@ public class SecurityConfig {
   @Bean
   SecurityFilterChain securityFilterChain(HttpSecurity http)
       throws Exception {
-    return http.csrf(csrf -> csrf.disable())
+    http.csrf(csrf -> csrf.disable())
         .authorizeHttpRequests(requests -> requests
-            .requestMatchers("/auth/welcome").permitAll())
+            .requestMatchers("/", "/index/**", "/product/**", "/checkout",
+                "/docheckout")
+            .permitAll())
         .authorizeHttpRequests(
-            requests -> requests.requestMatchers("/auth/user/**")
-                .authenticated())
+            requests -> requests.requestMatchers("/login", "logout")
+                .permitAll())
+        .authorizeHttpRequests(
+            requests -> requests
+                .requestMatchers("/css/**", "/js/**", "/images/**")
+                .permitAll())
         .authorizeHttpRequests(
             requests -> requests.requestMatchers("/auth/admin/**")
                 .authenticated())
-        .formLogin(authz -> authz.loginPage("/login").permitAll()).build();
+        .formLogin(authz -> authz.loginPage("/login").defaultSuccessUrl("/")
+            .permitAll());
+    http.logout(
+        authz -> authz.deleteCookies("remove").invalidateHttpSession(
+            true) // remove vs JSESSIONID
+            .logoutUrl("/logout")
+            .logoutSuccessUrl("/logout-success")
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout")));
+
+    return http.build();
   }
 
   // Password Encoding
