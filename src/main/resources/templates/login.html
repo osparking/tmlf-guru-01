@@ -26,13 +26,13 @@
 						<div>
 							<input type="text" class="form-control"
 								th:class="'form-control ' + 
-					    ${#fields.hasErrors('userid') ? 'is-invalid' : ''}"
-								placeholder="아이디" th:placeholder="#{login.page.input.userid}"
-								th:field="*{userid}" />
+					    ${#fields.hasErrors('username') ? 'is-invalid' : ''}"
+								placeholder="아이디" th:placeholder="#{login.page.input.username}"
+								th:field="*{username}" />
 						</div>
 						<div>
 							<div class="alert alert-warning"
-								th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}">
+								th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
 							</div>
 						</div>
 					</div>
