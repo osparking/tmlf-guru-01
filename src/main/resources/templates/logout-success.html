@@ -133,14 +133,18 @@ img {
 <body class="bg-dark">
 	<div class="container">
 		<div class="row">
-			<div class="w-50 col-5 offset-4 text-light mt-5">
-				<h2 th:text="#{logout-success.page.anchor.h2}">다음에 또 만나요~</h2>
-				<h3>
-					<a href="/login" th:text="#{logout-success.page.anchor.login}"
-						style="color: #f9ebfa">로그인</a>
-					<a href="/" th:text="#{jumbotron.page.anchor.home}"
-						style="color: #f9ebfa" class="ms-5">가정</a>
-				</h3>
+			<div class="text-light mt-5 ms-auto me-auto"
+				style="min-width: 300px !important;">
+				<h2 class="text-center mb-5"
+					th:text="#{logout-success.page.anchor.h2}">다음에 또 만나요~</h2>
+				<div class="ms-auto me-auto" style="max-width: 300px !important;">
+					<h3 class="d-flex justify-content-between">
+						<a href="/login" th:text="#{logout-success.page.anchor.login}"
+							style="color: #f9ebfa">로그인</a>
+						<a href="/" th:text="#{jumbotron.page.anchor.home}"
+							style="color: #f9ebfa" class="ms-5">가정</a>
+					</h3>
+				</div>
 			</div>
 		</div>
 	</div>
