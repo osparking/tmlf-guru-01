@@ -147,18 +147,22 @@ img {
 				<div class="mt-auto mb-auto">
 					<p class="mb-0">
 						환영합니다 :
-						<span
+ 				    <span
 							th:text="${#authorization.expression('isAuthenticated()') 
 							  ? #authentication.principal.username 
 	              : #authentication.principal}">사용자명</span>
+<!-- 				<span sec:authorize="!isAuthenticated()"
+							th:text="${#authentication.principal}">익명사용자</span>
+						<span sec:authorize="isAuthenticated()"
+							th:text="${#authentication.principal.username}">유저네임</span> -->
 					</p>
 					<p class="mb-0">
-						<a href="/login"
-							th:href="${#authorization.expression('isAuthenticated()')}
-							  ? '/logout' : '/login'"
-							th:text="${#authorization.expression('isAuthenticated()')}
-							  ? #{index.page.anchor.logout} : #{index.page.anchor.login}"
+						<a href="/login" sec:authorize="!isAuthenticated()"
+							th:text="#{index.page.anchor.login}"
 							class="text-light">로그인</a>
+						<a href="/logout" sec:authorize="isAuthenticated()"
+							th:text="#{index.page.anchor.logout}"
+							class="text-light">로그아웃</a>
 					</p>
 				</div>
 			</div>
