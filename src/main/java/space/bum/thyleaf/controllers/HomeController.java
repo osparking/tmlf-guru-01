@@ -23,4 +23,9 @@ public class HomeController {
     model.addAttribute("products", productService.listProducts());
     return "index";
   }
+
+  @GetMapping("secured")
+  public String secured() {
+    return "secured";
+  }
 }
