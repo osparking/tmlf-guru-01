@@ -150,13 +150,13 @@ img {
 			</div>
 		</div>
 
-		<div class="row" sec:authorize="isAuthenticated()">
+		<div class="row" sec:authorize="hasRole('ROLE_ADMIN')">
 			<div class="col-md-10 offset-2">
 				<h2>사용자는 Admin 역할을 한다.</h2>
 			</div>
 		</div>
-
-		<div class="row" sec:authorize="isAuthenticated()">
+		
+		<div class="row" sec:authorize="hasRole('ROLE_USER')">
 			<div class="col-md-10 offset-2">
 				<h2>사용자는 User 역할을 한다.</h2>
 			</div>
