@@ -140,7 +140,11 @@ img {
 
 		<div class="row" sec:authorize="isAuthenticated()">
 			<div class="col-md-10 offset-2">
-				<h2 style="color: green">사용자는 로그인하였다.</h2>
+				<h2 style="color: green">
+					로그인된 상태이다. (사용자 이름 =
+					<span sec:authentication="principal.username" class="text-dark">
+						유저네임</span>)
+				</h2>
 			</div>
 		</div>
 
