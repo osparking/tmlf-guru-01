@@ -140,13 +140,14 @@ img {
 
 		<div class="row" sec:authorize="isAuthenticated()">
 			<div class="col-md-10 offset-2">
-				<h2 style="color:green">사용자는 로그인하였다.</h2>
+				<h2 style="color: green">사용자는 로그인하였다.</h2>
 			</div>
 		</div>
 
-		<div class="row" sec:authorize="!isAuthenticated()">
+		<!-- <div class="row" sec:authorize="!isAuthenticated()"> -->
+		<div class="row" sec:authorize="isAnonymous()">
 			<div class="col-md-10 offset-2">
-				<h2 style="color:red">사용자는 로그아웃하였다.</h2>
+				<h2 style="color: red">사용자는 로그아웃하였다.</h2>
 			</div>
 		</div>
 
@@ -155,15 +156,21 @@ img {
 				<h2>사용자는 Admin 역할을 한다.</h2>
 			</div>
 		</div>
-		
+
 		<div class="row" sec:authorize="hasRole('ROLE_USER')">
 			<div class="col-md-10 offset-2">
 				<h2>사용자는 User 역할을 한다.</h2>
 			</div>
 		</div>
+
+		<div class="row" sec:authorize="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')">
+			<div class="col-md-10 offset-2">
+				<h2>사용자는 admin 혹은 user 역할이 있다.</h2>
+			</div>
+		</div>
 	</div>
-  <div class="container" th:replace="~{fragments/jumbotron :: footer}">
-    <p>푸터</p>
-  </div>
+	<div class="container" th:replace="~{fragments/jumbotron :: footer}">
+		<p>푸터</p>
+	</div>
 </body>
 </html>
